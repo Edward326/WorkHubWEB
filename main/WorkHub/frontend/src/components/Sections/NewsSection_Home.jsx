@@ -83,7 +83,8 @@ export default function NewsSection_Home({
           title: title.trim(),
           content: content.trim(),
           image_url: imageUrl.trim() || null,
-          is_public: true
+          is_public: true,
+          isCEO
         })
       });
 

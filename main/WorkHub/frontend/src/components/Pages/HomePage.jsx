@@ -127,7 +127,7 @@ export default function HomePage() {
     if (!userData) return null;
 
     const isCEO = userData.userType === 'ceo';
-    const canPostNews = isCEO || (roleData && roleData.can_post_news);
+    const canPostNews = !isCEO || (roleData && roleData.can_post_news);
     const canPostEvent = !isCEO || (roleData && roleData.can_post_event);
 
     switch(activeSection) {
